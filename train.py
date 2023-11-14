@@ -80,3 +80,6 @@ def main():
     trainer.train()
 
     torch.save(model.state_dict(), ckpt_path + "pytorch_model.bin")
+
+if __name__ == "__main__":
+    main()

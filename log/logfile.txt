@@ -8,3 +8,326 @@
 2023-11-10 16:24:02,607 - train_logger - INFO - Average loss value: 0.6152408829375879, average perplexity: 1.8750809228109184
 2023-11-10 16:29:03,623 - train_logger - INFO - Epoch 1 finished. Time consumption: 301.01577043533325s.
 2023-11-10 16:29:03,624 - train_logger - INFO - Average loss value: 0.6165587506632306, average perplexity: 1.878967732247251
+2023-11-16 15:26:52,156 - train_logger - INFO - Evaluate duration: 116.53084826469421, Average loss value: 0.14275823165287918, average perplexity: 1.184510382318566
+2023-11-16 15:26:52,156 - train_logger - INFO - Evaluate duration: 116.53084826469421, Average loss value: 0.14275823165287918, average perplexity: 1.184510382318566
+2023-11-16 15:26:52,157 - train_logger - INFO - Accuracy: 0.9677618145942688, Precision: nan, Recall: 0.0, F1-score: nan
+2023-11-16 15:26:52,157 - train_logger - INFO - Accuracy: 0.9677618145942688, Precision: nan, Recall: 0.0, F1-score: nan
+2023-11-16 15:34:49,080 - train_logger - INFO - Evaluate duration: 23.917943716049194, Average loss value: 0.14974873301086075, average perplexity: 1.1958655031456549
+2023-11-16 15:34:49,080 - train_logger - INFO - Evaluate duration: 23.917943716049194, Average loss value: 0.14974873301086075, average perplexity: 1.1958655031456549
+2023-11-16 15:34:49,082 - train_logger - INFO - Accuracy: 0.9655172413793104, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-16 15:34:49,082 - train_logger - INFO - Accuracy: 0.9655172413793104, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-16 15:55:21,492 - train_logger - INFO - Epoch 0 finished. Time consumption: 215.5031394958496s.
+2023-11-16 15:55:21,493 - train_logger - INFO - Average loss value: 0.6501232429598429, average perplexity: 1.9325409171456387
+2023-11-16 16:00:51,383 - train_logger - INFO - Epoch 0 finished. Time consumption: 218.8549098968506s.
+2023-11-16 16:00:51,383 - train_logger - INFO - Average loss value: 0.6501232429598429, average perplexity: 1.9325409171456387
+2023-11-16 16:15:39,428 - train_logger - INFO - Epoch 0 finished. Time consumption: 216.79696774482727s.
+2023-11-16 16:15:39,428 - train_logger - INFO - Average loss value: 0.6501232429598429, average perplexity: 1.9325409171456387
+2023-11-16 16:20:55,104 - train_logger - INFO - Evaluate duration: 20.813388347625732, Average loss value: 0.5679377155129317, average perplexity: 1.7905294935642944
+2023-11-16 16:20:55,104 - train_logger - INFO - Accuracy: 0.7490007993605116, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-16 20:16:08,379 - train_logger - INFO - Evaluate duration: 115.5710015296936, Average loss value: 0.3896919552524297, average perplexity: 1.4786462439591572
+2023-11-16 20:16:08,380 - train_logger - INFO - Accuracy: 0.9677618069815195, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-16 20:16:08,381 - train_logger - INFO - Accuracy: 0.9677618069815195, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-17 11:01:50,743 - train_logger - INFO - Evaluate duration: 5.150216817855835, Average loss value: 0.6437453490037185, average perplexity: 1.9171483167755927
+2023-11-17 11:01:50,743 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-17 11:01:50,744 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-17 11:01:50,744 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-27 16:18:25,006 - train_logger - INFO - Epoch 1/1 finished. Time consumption: 10.662545919418335s.
+2023-11-27 16:18:25,024 - train_logger - INFO - Average loss value: 0.7693414493249013, average perplexity: 2.3031133235222723
+2023-11-27 16:18:42,641 - train_logger - INFO - Evaluate duration: 3.8324520587921143, Average loss value: 0.6437453490037185, average perplexity: 1.9171483167755927
+2023-11-27 16:18:42,651 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-27 16:18:42,651 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-27 16:18:42,651 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-27 16:19:37,407 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.443639039993286s.
+2023-11-27 16:19:37,407 - train_logger - INFO - Average loss value: 0.7693414493249013, average perplexity: 2.3031133235222723
+2023-11-27 16:19:45,190 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.7734479904174805s.
+2023-11-27 16:19:45,190 - train_logger - INFO - Average loss value: 0.6732881871553568, average perplexity: 2.004980989667149
+2023-11-27 16:19:53,005 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.81535005569458s.
+2023-11-27 16:19:53,005 - train_logger - INFO - Average loss value: 0.687494848210078, average perplexity: 2.0333047365070485
+2023-11-27 16:20:00,802 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.796177387237549s.
+2023-11-27 16:20:00,802 - train_logger - INFO - Average loss value: 0.6650970979378774, average perplexity: 1.9753904221787393
+2023-11-27 16:20:08,618 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.8163902759552s.
+2023-11-27 16:20:08,618 - train_logger - INFO - Average loss value: 0.664317461160513, average perplexity: 1.966869587946457
+2023-11-27 16:20:16,445 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.826823472976685s.
+2023-11-27 16:20:16,445 - train_logger - INFO - Average loss value: 0.653096216229292, average perplexity: 1.939207665460137
+2023-11-27 16:20:24,250 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.795517206192017s.
+2023-11-27 16:20:24,250 - train_logger - INFO - Average loss value: 0.6499760586481828, average perplexity: 1.931275838140622
+2023-11-27 16:20:32,032 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.78192400932312s.
+2023-11-27 16:20:32,032 - train_logger - INFO - Average loss value: 0.6467190854824506, average perplexity: 1.9250096534849457
+2023-11-27 16:20:39,812 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.779379606246948s.
+2023-11-27 16:20:39,812 - train_logger - INFO - Average loss value: 0.6681245003755276, average perplexity: 1.9809040317682047
+2023-11-27 16:20:47,592 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.780176639556885s.
+2023-11-27 16:20:47,601 - train_logger - INFO - Average loss value: 0.6603369002158825, average perplexity: 1.956350302134457
+2023-11-27 16:21:01,620 - train_logger - INFO - Evaluate duration: 3.8549153804779053, Average loss value: 0.6437453490037185, average perplexity: 1.9171483167755927
+2023-11-27 16:21:01,620 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-27 16:21:01,620 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-27 16:21:01,620 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-28 12:14:42,190 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 10.663013935089111s.
+2023-11-28 12:14:42,200 - train_logger - INFO - Average loss value: 0.7589208082510874, average perplexity: 2.278102224706389
+2023-11-28 12:14:49,964 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.764741659164429s.
+2023-11-28 12:14:49,964 - train_logger - INFO - Average loss value: 0.6787603371418439, average perplexity: 2.0205263131788116
+2023-11-28 12:14:57,733 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.7686240673065186s.
+2023-11-28 12:14:57,733 - train_logger - INFO - Average loss value: 0.6986084018762295, average perplexity: 2.0649132651253654
+2023-11-28 12:15:05,492 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.759376049041748s.
+2023-11-28 12:15:05,492 - train_logger - INFO - Average loss value: 0.6641514358612207, average perplexity: 1.9737912846723569
+2023-11-28 12:15:13,448 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.955930948257446s.
+2023-11-28 12:15:13,448 - train_logger - INFO - Average loss value: 0.6559850458915417, average perplexity: 1.9483634351705357
+2023-11-28 12:15:21,604 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 8.15513801574707s.
+2023-11-28 12:15:21,604 - train_logger - INFO - Average loss value: 0.6509004258192502, average perplexity: 1.9346148222018196
+2023-11-28 12:15:29,604 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.9997851848602295s.
+2023-11-28 12:15:29,604 - train_logger - INFO - Average loss value: 0.6505307795909735, average perplexity: 1.932454879652334
+2023-11-28 12:15:37,533 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.928694486618042s.
+2023-11-28 12:15:37,533 - train_logger - INFO - Average loss value: 0.6430622591422155, average perplexity: 1.9162919942503438
+2023-11-28 12:15:45,381 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.848290681838989s.
+2023-11-28 12:15:45,381 - train_logger - INFO - Average loss value: 0.6689329846547201, average perplexity: 1.9836883646075782
+2023-11-28 12:15:53,377 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.995989561080933s.
+2023-11-28 12:15:53,377 - train_logger - INFO - Average loss value: 0.6547209998736014, average perplexity: 1.9437764074212884
+2023-11-28 12:16:38,951 - train_logger - INFO - Evaluate duration: 3.8568522930145264, Average loss value: 0.6487586727509131, average perplexity: 1.9305544710836515
+2023-11-28 12:16:38,951 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:16:38,951 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:16:38,951 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-28 12:23:11,058 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.346926212310791s.
+2023-11-28 12:23:11,058 - train_logger - INFO - Average loss value: 0.7589208082510874, average perplexity: 2.278102224706389
+2023-11-28 12:23:18,785 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.726486682891846s.
+2023-11-28 12:23:18,785 - train_logger - INFO - Average loss value: 0.6787603371418439, average perplexity: 2.0205263131788116
+2023-11-28 12:23:26,498 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.713357925415039s.
+2023-11-28 12:23:26,498 - train_logger - INFO - Average loss value: 0.6986084018762295, average perplexity: 2.0649132651253654
+2023-11-28 12:23:34,253 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.755093812942505s.
+2023-11-28 12:23:34,253 - train_logger - INFO - Average loss value: 0.6641514358612207, average perplexity: 1.9737912846723569
+2023-11-28 12:23:41,976 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.722637414932251s.
+2023-11-28 12:23:41,976 - train_logger - INFO - Average loss value: 0.6559850458915417, average perplexity: 1.9483634351705357
+2023-11-28 12:23:49,703 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.727261066436768s.
+2023-11-28 12:23:49,713 - train_logger - INFO - Average loss value: 0.6509004258192502, average perplexity: 1.9346148222018196
+2023-11-28 12:23:57,501 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.7875752449035645s.
+2023-11-28 12:23:57,501 - train_logger - INFO - Average loss value: 0.6505307795909735, average perplexity: 1.932454879652334
+2023-11-28 12:24:05,260 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.759365797042847s.
+2023-11-28 12:24:05,260 - train_logger - INFO - Average loss value: 0.6430622591422155, average perplexity: 1.9162919942503438
+2023-11-28 12:24:13,062 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.802001237869263s.
+2023-11-28 12:24:13,062 - train_logger - INFO - Average loss value: 0.6689329846547201, average perplexity: 1.9836883646075782
+2023-11-28 12:24:20,881 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.81885027885437s.
+2023-11-28 12:24:20,881 - train_logger - INFO - Average loss value: 0.6547209998736014, average perplexity: 1.9437764074212884
+2023-11-28 12:24:38,667 - train_logger - INFO - Evaluate duration: 3.8114304542541504, Average loss value: 0.6487586727509131, average perplexity: 1.9305544710836515
+2023-11-28 12:24:38,667 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:24:38,667 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:24:38,667 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-28 12:28:08,467 - train_logger - INFO - Evaluate duration: 3.756661891937256, Average loss value: 0.6487586727509131, average perplexity: 1.9305544710836515
+2023-11-28 12:28:08,467 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:28:08,467 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:28:08,467 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-28 12:30:36,533 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.357924222946167s.
+2023-11-28 12:30:36,543 - train_logger - INFO - Average loss value: 0.7693414493249013, average perplexity: 2.3031133235222723
+2023-11-28 12:30:44,260 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.716861724853516s.
+2023-11-28 12:30:44,270 - train_logger - INFO - Average loss value: 0.6732881871553568, average perplexity: 2.004980989667149
+2023-11-28 12:30:51,970 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.700191259384155s.
+2023-11-28 12:30:51,970 - train_logger - INFO - Average loss value: 0.687494848210078, average perplexity: 2.0333047365070485
+2023-11-28 12:30:59,723 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.75321626663208s.
+2023-11-28 12:30:59,723 - train_logger - INFO - Average loss value: 0.6650970979378774, average perplexity: 1.9753904221787393
+2023-11-28 12:31:07,448 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.724541664123535s.
+2023-11-28 12:31:07,448 - train_logger - INFO - Average loss value: 0.664317461160513, average perplexity: 1.966869587946457
+2023-11-28 12:31:15,211 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.762599945068359s.
+2023-11-28 12:31:15,211 - train_logger - INFO - Average loss value: 0.653096216229292, average perplexity: 1.939207665460137
+2023-11-28 12:31:22,988 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.767451524734497s.
+2023-11-28 12:31:22,988 - train_logger - INFO - Average loss value: 0.6499760586481828, average perplexity: 1.931275838140622
+2023-11-28 12:31:30,774 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.786102533340454s.
+2023-11-28 12:31:30,774 - train_logger - INFO - Average loss value: 0.6467190854824506, average perplexity: 1.9250096534849457
+2023-11-28 12:31:38,570 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.795701503753662s.
+2023-11-28 12:31:38,570 - train_logger - INFO - Average loss value: 0.6681245003755276, average perplexity: 1.9809040317682047
+2023-11-28 12:31:46,366 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.796596050262451s.
+2023-11-28 12:31:46,366 - train_logger - INFO - Average loss value: 0.6603369002158825, average perplexity: 1.956350302134457
+2023-11-28 12:32:05,565 - train_logger - INFO - Evaluate duration: 3.8149521350860596, Average loss value: 0.6512398559313554, average perplexity: 1.9368805341277497
+2023-11-28 12:32:05,565 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:32:05,565 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:32:05,565 - train_logger - INFO - Group accuracy: 0.0, Group correct: 0, Group all: 43
+2023-11-28 12:41:34,670 - train_logger - INFO - Evaluate duration: 3.7391796112060547, Average loss value: 0.6512398559313554, average perplexity: 1.9368805341277497
+2023-11-28 12:41:34,670 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:41:34,670 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:41:34,670 - train_logger - INFO - Group accuracy: 0.5813953488372093, Group correct: 25, Group all: 43
+2023-11-28 12:42:35,627 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.401907444000244s.
+2023-11-28 12:42:35,627 - train_logger - INFO - Average loss value: 0.7589208082510874, average perplexity: 2.278102224706389
+2023-11-28 12:42:43,400 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.772710800170898s.
+2023-11-28 12:42:43,400 - train_logger - INFO - Average loss value: 0.6787603371418439, average perplexity: 2.0205263131788116
+2023-11-28 12:42:51,084 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.684424877166748s.
+2023-11-28 12:42:51,084 - train_logger - INFO - Average loss value: 0.6986084018762295, average perplexity: 2.0649132651253654
+2023-11-28 12:42:58,809 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.724364757537842s.
+2023-11-28 12:42:58,809 - train_logger - INFO - Average loss value: 0.6641514358612207, average perplexity: 1.9737912846723569
+2023-11-28 12:43:06,531 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.7223005294799805s.
+2023-11-28 12:43:06,532 - train_logger - INFO - Average loss value: 0.6559850458915417, average perplexity: 1.9483634351705357
+2023-11-28 12:43:14,274 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.741557359695435s.
+2023-11-28 12:43:14,274 - train_logger - INFO - Average loss value: 0.6509004258192502, average perplexity: 1.9346148222018196
+2023-11-28 12:43:22,047 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.773373126983643s.
+2023-11-28 12:43:22,047 - train_logger - INFO - Average loss value: 0.6505307795909735, average perplexity: 1.932454879652334
+2023-11-28 12:43:29,813 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.76578426361084s.
+2023-11-28 12:43:29,813 - train_logger - INFO - Average loss value: 0.6430622591422155, average perplexity: 1.9162919942503438
+2023-11-28 12:43:37,590 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.76711368560791s.
+2023-11-28 12:43:37,590 - train_logger - INFO - Average loss value: 0.6689329846547201, average perplexity: 1.9836883646075782
+2023-11-28 12:43:45,367 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.776988983154297s.
+2023-11-28 12:43:45,367 - train_logger - INFO - Average loss value: 0.6547209998736014, average perplexity: 1.9437764074212884
+2023-11-28 12:43:58,995 - train_logger - INFO - Evaluate duration: 3.84684419631958, Average loss value: 0.6487586727509131, average perplexity: 1.9305544710836515
+2023-11-28 12:43:58,995 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:43:58,995 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:43:58,995 - train_logger - INFO - Group accuracy: 0.46511627906976744, Group correct: 20, Group all: 43
+2023-11-28 12:47:22,493 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.50237774848938s.
+2023-11-28 12:47:22,493 - train_logger - INFO - Average loss value: 0.7796342143645654, average perplexity: 2.4959711504224886
+2023-11-28 12:47:30,337 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.833578109741211s.
+2023-11-28 12:47:30,337 - train_logger - INFO - Average loss value: 0.6853937277427087, average perplexity: 2.021709903315584
+2023-11-28 12:47:38,043 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.705979824066162s.
+2023-11-28 12:47:38,043 - train_logger - INFO - Average loss value: 0.6888217742626483, average perplexity: 2.031184313855178
+2023-11-28 12:47:45,765 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.722506999969482s.
+2023-11-28 12:47:45,765 - train_logger - INFO - Average loss value: 0.6633511449281986, average perplexity: 1.9596084500993263
+2023-11-28 12:47:53,549 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.783596992492676s.
+2023-11-28 12:47:53,549 - train_logger - INFO - Average loss value: 0.6575148793367239, average perplexity: 1.952969709218206
+2023-11-28 12:48:01,288 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.738429069519043s.
+2023-11-28 12:48:01,288 - train_logger - INFO - Average loss value: 0.6545277306666741, average perplexity: 1.9412521954393875
+2023-11-28 12:48:09,018 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.730858325958252s.
+2023-11-28 12:48:09,018 - train_logger - INFO - Average loss value: 0.6469695854645509, average perplexity: 1.9251253324617479
+2023-11-28 12:48:16,818 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.7993385791778564s.
+2023-11-28 12:48:16,818 - train_logger - INFO - Average loss value: 0.6440682640442481, average perplexity: 1.9186080165816592
+2023-11-28 12:48:24,608 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.78985333442688s.
+2023-11-28 12:48:24,608 - train_logger - INFO - Average loss value: 0.6662726654456212, average perplexity: 1.9742769211572808
+2023-11-28 12:48:32,419 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.8111512660980225s.
+2023-11-28 12:48:32,419 - train_logger - INFO - Average loss value: 0.6548142650952706, average perplexity: 1.9439068528462944
+2023-11-28 12:48:53,469 - train_logger - INFO - Evaluate duration: 3.8465991020202637, Average loss value: 0.6488619079956641, average perplexity: 1.930820237263563
+2023-11-28 12:48:53,469 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:48:53,469 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 12:48:53,469 - train_logger - INFO - Group accuracy: 0.4186046511627907, Group correct: 18, Group all: 43
+2023-11-28 12:56:02,562 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.338258266448975s.
+2023-11-28 12:56:02,562 - train_logger - INFO - Average loss value: 1.4320928213688044, average perplexity: 849.8983910176795
+2023-11-28 12:56:10,331 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.769037246704102s.
+2023-11-28 12:56:10,331 - train_logger - INFO - Average loss value: 1.1215641922675645, average perplexity: 4.399446609106652
+2023-11-28 12:56:18,049 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.717572927474976s.
+2023-11-28 12:56:18,049 - train_logger - INFO - Average loss value: 2.550052178522142, average perplexity: 1440.793717264311
+2023-11-28 12:56:25,765 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.715831995010376s.
+2023-11-28 12:56:25,765 - train_logger - INFO - Average loss value: 2.8242371103439767, average perplexity: 313.28105793421105
+2023-11-28 12:58:46,014 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.364651918411255s.
+2023-11-28 12:58:46,014 - train_logger - INFO - Average loss value: 1.0561595673744495, average perplexity: 11.135291775087039
+2023-11-28 12:58:53,770 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.75677752494812s.
+2023-11-28 12:58:53,770 - train_logger - INFO - Average loss value: 0.7940445611110101, average perplexity: 2.4246539104754428
+2023-11-28 12:59:01,522 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.752071857452393s.
+2023-11-28 12:59:01,522 - train_logger - INFO - Average loss value: 0.870348633481906, average perplexity: 2.6156677537747735
+2023-11-28 12:59:09,267 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.744379281997681s.
+2023-11-28 12:59:09,267 - train_logger - INFO - Average loss value: 0.7642123819543765, average perplexity: 2.2603254158468378
+2023-11-28 12:59:17,016 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.749695301055908s.
+2023-11-28 12:59:17,016 - train_logger - INFO - Average loss value: 0.8236232766738305, average perplexity: 2.4600277020322383
+2023-11-28 12:59:24,781 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.764618396759033s.
+2023-11-28 12:59:24,781 - train_logger - INFO - Average loss value: 0.7665679053618357, average perplexity: 2.211623564312307
+2023-11-28 12:59:32,581 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.800233364105225s.
+2023-11-28 12:59:32,581 - train_logger - INFO - Average loss value: 0.7776220853512104, average perplexity: 2.317550075531497
+2023-11-28 13:00:09,508 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.443866491317749s.
+2023-11-28 13:00:09,508 - train_logger - INFO - Average loss value: 0.7534913237278278, average perplexity: 2.4765885475109317
+2023-11-28 13:00:17,366 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.8574910163879395s.
+2023-11-28 13:00:17,366 - train_logger - INFO - Average loss value: 0.6979289307044103, average perplexity: 2.0545555087271365
+2023-11-28 13:00:25,177 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.8114914894104s.
+2023-11-28 13:00:25,177 - train_logger - INFO - Average loss value: 0.6950873125057954, average perplexity: 2.045855582225423
+2023-11-28 13:00:32,989 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.801812171936035s.
+2023-11-28 13:00:32,989 - train_logger - INFO - Average loss value: 0.6806765657204848, average perplexity: 2.0085859240446036
+2023-11-28 13:00:40,804 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.8144731521606445s.
+2023-11-28 13:00:40,804 - train_logger - INFO - Average loss value: 0.7317851655758344, average perplexity: 2.115517405849184
+2023-11-28 13:00:48,605 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.801121234893799s.
+2023-11-28 13:00:48,605 - train_logger - INFO - Average loss value: 0.6735524901976953, average perplexity: 1.9735142337430316
+2023-11-28 13:00:56,422 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.817314624786377s.
+2023-11-28 13:00:56,422 - train_logger - INFO - Average loss value: 0.6747359117636313, average perplexity: 1.9789411267828094
+2023-11-28 13:01:04,275 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.853055000305176s.
+2023-11-28 13:01:04,275 - train_logger - INFO - Average loss value: 0.6829995891222587, average perplexity: 1.9971388596634247
+2023-11-28 13:01:12,127 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.851609945297241s.
+2023-11-28 13:01:12,127 - train_logger - INFO - Average loss value: 0.6736058111374195, average perplexity: 1.9868985466986153
+2023-11-28 13:01:19,961 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.834140777587891s.
+2023-11-28 13:01:19,961 - train_logger - INFO - Average loss value: 0.675183599958053, average perplexity: 1.9816139882537176
+2023-11-28 13:01:36,814 - train_logger - INFO - Evaluate duration: 3.8269853591918945, Average loss value: 0.6428363621234894, average perplexity: 1.9075129560437745
+2023-11-28 13:01:36,814 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 13:01:36,814 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 13:01:36,824 - train_logger - INFO - Group accuracy: 0.3488372093023256, Group correct: 15, Group all: 43
+2023-11-28 13:13:44,440 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.337679147720337s.
+2023-11-28 13:13:44,440 - train_logger - INFO - Average loss value: 0.7902120111080316, average perplexity: 3.1582943198134847
+2023-11-28 13:13:52,189 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.7484047412872314s.
+2023-11-28 13:13:52,189 - train_logger - INFO - Average loss value: 0.7015753388404846, average perplexity: 2.112805545298344
+2023-11-28 13:13:59,866 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.677282094955444s.
+2023-11-28 13:13:59,866 - train_logger - INFO - Average loss value: 0.6875601399403352, average perplexity: 2.0299462218432778
+2023-11-28 13:14:07,564 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.697793483734131s.
+2023-11-28 13:14:07,564 - train_logger - INFO - Average loss value: 0.687051996588707, average perplexity: 2.0329768883417447
+2023-11-28 13:14:15,294 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.730142831802368s.
+2023-11-28 13:14:15,294 - train_logger - INFO - Average loss value: 0.7700264981159797, average perplexity: 2.300784219471185
+2023-11-28 13:14:23,074 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.779992341995239s.
+2023-11-28 13:14:23,074 - train_logger - INFO - Average loss value: 0.7265120343520091, average perplexity: 2.111462986369777
+2023-11-28 13:14:30,817 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.743347883224487s.
+2023-11-28 13:14:30,817 - train_logger - INFO - Average loss value: 0.743652826318374, average perplexity: 2.177127737505576
+2023-11-28 13:14:38,626 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.808661937713623s.
+2023-11-28 13:14:38,626 - train_logger - INFO - Average loss value: 0.685534187234365, average perplexity: 2.004272572327463
+2023-11-28 13:14:46,472 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.845521688461304s.
+2023-11-28 13:14:46,472 - train_logger - INFO - Average loss value: 0.6710152201927625, average perplexity: 1.9906666367885646
+2023-11-28 13:14:54,265 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.7937233448028564s.
+2023-11-28 13:14:54,265 - train_logger - INFO - Average loss value: 0.7094277005929214, average perplexity: 2.094856143186104
+2023-11-28 13:15:07,612 - train_logger - INFO - Evaluate duration: 3.840968132019043, Average loss value: 0.6471304182822888, average perplexity: 1.9137631291359953
+2023-11-28 13:15:07,612 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 13:15:07,612 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 13:15:07,612 - train_logger - INFO - Group accuracy: 0.37209302325581395, Group correct: 16, Group all: 43
+2023-11-28 13:36:32,753 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.358867645263672s.
+2023-11-28 13:36:32,753 - train_logger - INFO - Average loss value: 0.7089332433847281, average perplexity: 2.152047320422032
+2023-11-28 13:36:40,473 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.720323324203491s.
+2023-11-28 13:36:40,473 - train_logger - INFO - Average loss value: 0.6800905878727252, average perplexity: 2.0097822933797618
+2023-11-28 13:36:48,236 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.762901782989502s.
+2023-11-28 13:36:48,237 - train_logger - INFO - Average loss value: 0.6812955198379663, average perplexity: 2.010586539930734
+2023-11-28 13:36:56,069 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.8321239948272705s.
+2023-11-28 13:36:56,069 - train_logger - INFO - Average loss value: 0.6587817531365615, average perplexity: 1.9512894269771845
+2023-11-28 13:37:03,965 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.8950865268707275s.
+2023-11-28 13:37:03,965 - train_logger - INFO - Average loss value: 0.6752641074932538, average perplexity: 1.9868848030999708
+2023-11-28 13:37:11,965 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.999702215194702s.
+2023-11-28 13:37:11,965 - train_logger - INFO - Average loss value: 0.6612655818462372, average perplexity: 1.9529999777501674
+2023-11-28 13:37:19,949 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.984065771102905s.
+2023-11-28 13:37:19,949 - train_logger - INFO - Average loss value: 0.657408588207685, average perplexity: 1.945838337198722
+2023-11-28 13:37:27,834 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.874505281448364s.
+2023-11-28 13:37:27,834 - train_logger - INFO - Average loss value: 0.6527499189743629, average perplexity: 1.9353063325969442
+2023-11-28 13:37:35,744 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.910392999649048s.
+2023-11-28 13:37:35,744 - train_logger - INFO - Average loss value: 0.6626882163377908, average perplexity: 1.9672148642564602
+2023-11-28 13:37:43,664 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.919424057006836s.
+2023-11-28 13:37:43,673 - train_logger - INFO - Average loss value: 0.6762931404205469, average perplexity: 1.994327986379922
+2023-11-28 13:44:26,781 - train_logger - INFO - Evaluate duration: 3.765024423599243, Average loss value: 5.5763669564173775, average perplexity: 2380.1915887193686
+2023-11-28 13:44:26,781 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 13:44:26,781 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 13:44:26,781 - train_logger - INFO - Group accuracy: 0.20930232558139536, Group correct: 9, Group all: 43
+2023-11-28 14:00:02,382 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.426783561706543s.
+2023-11-28 14:00:02,382 - train_logger - INFO - Average loss value: 0.6518231057203733, average perplexity: 1.9383944063265621
+2023-11-28 14:00:10,144 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.761937141418457s.
+2023-11-28 14:00:10,144 - train_logger - INFO - Average loss value: 0.6464049036686237, average perplexity: 1.9289043994913262
+2023-11-28 14:00:18,124 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.980449199676514s.
+2023-11-28 14:00:18,124 - train_logger - INFO - Average loss value: 0.6377308815717697, average perplexity: 1.9093506435667738
+2023-11-28 14:00:26,050 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.925788164138794s.
+2023-11-28 14:00:26,050 - train_logger - INFO - Average loss value: 0.6320975182148126, average perplexity: 1.897975953966622
+2023-11-28 14:00:33,967 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.917027711868286s.
+2023-11-28 14:00:33,968 - train_logger - INFO - Average loss value: 0.634917397911732, average perplexity: 1.9025065985372267
+2023-11-28 14:00:41,973 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 8.005319595336914s.
+2023-11-28 14:00:41,973 - train_logger - INFO - Average loss value: 0.6355203367196597, average perplexity: 1.9032670481243854
+2023-11-28 14:00:49,980 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 8.006707429885864s.
+2023-11-28 14:00:49,980 - train_logger - INFO - Average loss value: 0.635160798063645, average perplexity: 1.9041051567626857
+2023-11-28 14:00:57,893 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.913584232330322s.
+2023-11-28 14:00:57,893 - train_logger - INFO - Average loss value: 0.6341924999768918, average perplexity: 1.8994464897202823
+2023-11-28 14:01:05,689 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.788647890090942s.
+2023-11-28 14:01:05,689 - train_logger - INFO - Average loss value: 0.6335093722893641, average perplexity: 1.9000920328768982
+2023-11-28 14:01:13,499 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.810213327407837s.
+2023-11-28 14:01:13,499 - train_logger - INFO - Average loss value: 0.6343535517270749, average perplexity: 1.9016292684938054
+2023-11-28 14:01:26,040 - train_logger - INFO - Evaluate duration: 3.8121063709259033, Average loss value: 5.54967509324734, average perplexity: 2256.0534208599697
+2023-11-28 14:01:26,040 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 14:01:26,041 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 14:01:26,041 - train_logger - INFO - Group accuracy: 0.627906976744186, Group correct: 27, Group all: 43
+2023-11-28 14:03:59,350 - train_logger - INFO - Epoch 1/10 finished. Time consumption: 9.29380989074707s.
+2023-11-28 14:03:59,350 - train_logger - INFO - Average loss value: 0.6463810480557955, average perplexity: 1.9297515213567549
+2023-11-28 14:04:07,086 - train_logger - INFO - Epoch 2/10 finished. Time consumption: 7.735951900482178s.
+2023-11-28 14:04:07,086 - train_logger - INFO - Average loss value: 0.644517705990718, average perplexity: 1.9243936980158272
+2023-11-28 14:04:14,807 - train_logger - INFO - Epoch 3/10 finished. Time consumption: 7.721422910690308s.
+2023-11-28 14:04:14,807 - train_logger - INFO - Average loss value: 0.6412039662782962, average perplexity: 1.9202342501680145
+2023-11-28 14:04:22,576 - train_logger - INFO - Epoch 4/10 finished. Time consumption: 7.768885612487793s.
+2023-11-28 14:04:22,576 - train_logger - INFO - Average loss value: 0.6369678767827841, average perplexity: 1.9082367613719238
+2023-11-28 14:04:30,319 - train_logger - INFO - Epoch 5/10 finished. Time consumption: 7.742323637008667s.
+2023-11-28 14:04:30,319 - train_logger - INFO - Average loss value: 0.6351201603045831, average perplexity: 1.9038440841872273
+2023-11-28 14:04:38,144 - train_logger - INFO - Epoch 6/10 finished. Time consumption: 7.825145721435547s.
+2023-11-28 14:04:38,144 - train_logger - INFO - Average loss value: 0.6323738843202591, average perplexity: 1.8971298606533564
+2023-11-28 14:04:45,948 - train_logger - INFO - Epoch 7/10 finished. Time consumption: 7.804218530654907s.
+2023-11-28 14:04:45,948 - train_logger - INFO - Average loss value: 0.6304059028625488, average perplexity: 1.8934473160536287
+2023-11-28 14:04:53,777 - train_logger - INFO - Epoch 8/10 finished. Time consumption: 7.828594923019409s.
+2023-11-28 14:04:53,777 - train_logger - INFO - Average loss value: 0.6291360396605271, average perplexity: 1.8903358921906805
+2023-11-28 14:05:01,597 - train_logger - INFO - Epoch 9/10 finished. Time consumption: 7.8201446533203125s.
+2023-11-28 14:05:01,597 - train_logger - INFO - Average loss value: 0.6281857261290917, average perplexity: 1.8881579018832269
+2023-11-28 14:05:09,408 - train_logger - INFO - Epoch 10/10 finished. Time consumption: 7.811380624771118s.
+2023-11-28 14:05:09,408 - train_logger - INFO - Average loss value: 0.6283682825473639, average perplexity: 1.8886671245502242
+2023-11-28 14:05:21,659 - train_logger - INFO - Evaluate duration: 3.8458309173583984, Average loss value: 0.6225962180357713, average perplexity: 1.8750873031400308
+2023-11-28 14:05:21,659 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 14:05:21,659 - train_logger - INFO - Accuracy: 0.6601941747572816, Precision: 0.0, Recall: 0.0, F1-score: 0.0
+2023-11-28 14:05:21,659 - train_logger - INFO - Group accuracy: 0.627906976744186, Group correct: 27, Group all: 43

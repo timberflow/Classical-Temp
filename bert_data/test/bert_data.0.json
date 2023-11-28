@@ -1,0 +1,1290 @@
+[
+    {
+        "query": "开盘价大于浪潮软件股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '浪潮软件' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.opening_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.opening_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"浪潮软件\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.opening_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.10476994514465332
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"浪潮软件\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.opening_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                44.14216184616089
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"浪潮软件\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.opening_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.7807521820068359
+            ]
+        ]
+    },
+    {
+        "query": "涨跌幅大于广东明珠股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '广东明珠' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.range AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.range > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"广东明珠\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.range > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.6601176261901855
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"广东明珠\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.range > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                45.06265449523926
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"广东明珠\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.range > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.11175870895385742
+            ]
+        ]
+    },
+    {
+        "query": "开盘价大于东风科技股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '东风科技' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.opening_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.opening_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"东风科技\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.opening_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                43.64472699165344
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"东风科技\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.opening_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.21431446075439453
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"东风科技\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.opening_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.6372013092041016
+            ]
+        ]
+    },
+    {
+        "query": "收盘价大于宁沪高速股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '宁沪高速' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.closing_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.closing_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"宁沪高速\" WITH sd.stock_data.closing_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.closing_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.14132475852966309
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"宁沪高速\" WITH sd.stock_data.closing_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.closing_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                44.94144105911255
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"宁沪高速\" WITH sd.stock_data.closing_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.closing_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.6602199077606201
+            ]
+        ]
+    },
+    {
+        "query": "成交量大于华鲁恒升股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '华鲁恒升' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.volume AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.volume > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"华鲁恒升\" WITH sd.stock_data.volume as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.volume > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.655531644821167
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"华鲁恒升\" WITH sd.stock_data.volume as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.volume > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                45.13943672180176
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"华鲁恒升\" WITH sd.stock_data.volume as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.volume > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.16205835342407227
+            ]
+        ]
+    },
+    {
+        "query": "涨跌幅大于明星电力股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '明星电力' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.range AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.range > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"明星电力\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.range > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                45.26248240470886
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"明星电力\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.range > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.8262894153594971
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"明星电力\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.range > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.05153346061706543
+            ]
+        ]
+    },
+    {
+        "query": "最低价大于宁波富达股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '宁波富达' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.minimum_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.minimum_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"宁波富达\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.minimum_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.14666461944580078
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"宁波富达\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.minimum_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.6233260631561279
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"宁波富达\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.minimum_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                44.993369817733765
+            ]
+        ]
+    },
+    {
+        "query": "收盘价大于化学行业的行业",
+        "golden": "MATCH (t:trade)-[htd:has_trade_data]->(td:trade_data) WHERE t.trade.name == '化学' AND td.trade_data.`date` == date('2023-11-11') WITH td.trade_data.closing_price AS temp MATCH (t:trade)-[htd:has_trade_data]->(td:trade_data) WHERE td.trade_data.closing_price > temp RETURN t.trade.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND indus.industry.name == \"化学\" WITH td.trade_data.closing_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.closing_price > temp \nRETURN t.trade.name\nLIMIT 50",
+                1,
+                8.04658842086792
+            ],
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE indus.industry.name == \"化学\" WITH td.trade_data.closing_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.closing_price > temp AND td.trade_data.`date` == date('2023-11-11') \nRETURN t.trade.name\nLIMIT 50",
+                0,
+                0.1977236270904541
+            ],
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND indus.industry.name == \"化学\" WITH td.trade_data.closing_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND td.trade_data.closing_price > temp \nRETURN t.trade.name\nLIMIT 50",
+                0,
+                0.03172445297241211
+            ]
+        ]
+    },
+    {
+        "query": "成交量大于信雅达股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '信雅达' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.volume AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.volume > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"信雅达\" WITH sd.stock_data.volume as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.volume > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.1452784538269043
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"信雅达\" WITH sd.stock_data.volume as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.volume > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                44.72181510925293
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"信雅达\" WITH sd.stock_data.volume as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.volume > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.6496379375457764
+            ]
+        ]
+    },
+    {
+        "query": "最高价大于化学行业的行业",
+        "golden": "MATCH (t:trade)-[htd:has_trade_data]->(td:trade_data) WHERE t.trade.name == '化学' AND td.trade_data.`date` == date('2023-11-11') WITH td.trade_data.maximum_price AS temp MATCH (t:trade)-[htd:has_trade_data]->(td:trade_data) WHERE td.trade_data.maximum_price > temp RETURN t.trade.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND indus.industry.name == \"化学\" WITH td.trade_data.maximum_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.maximum_price > temp \nRETURN t.trade.name\nLIMIT 50",
+                1,
+                10.233338356018066
+            ],
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE indus.industry.name == \"化学\" WITH td.trade_data.maximum_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.maximum_price > temp AND td.trade_data.`date` == date('2023-11-11') \nRETURN t.trade.name\nLIMIT 50",
+                0,
+                0.22353053092956543
+            ],
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND indus.industry.name == \"化学\" WITH td.trade_data.maximum_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND td.trade_data.maximum_price > temp \nRETURN t.trade.name\nLIMIT 50",
+                0,
+                0.03542590141296387
+            ]
+        ]
+    },
+    {
+        "query": "最低价大于海正药业股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '海正药业' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.minimum_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.minimum_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"海正药业\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.minimum_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                44.69363021850586
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"海正药业\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.minimum_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.658719539642334
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"海正药业\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.minimum_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.05966663360595703
+            ]
+        ]
+    },
+    {
+        "query": "最低价大于化学行业的行业",
+        "golden": "MATCH (t:trade)-[htd:has_trade_data]->(td:trade_data) WHERE t.trade.name == '化学' AND td.trade_data.`date` == date('2023-11-11') WITH td.trade_data.minimum_price AS temp MATCH (t:trade)-[htd:has_trade_data]->(td:trade_data) WHERE td.trade_data.minimum_price > temp RETURN t.trade.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND indus.industry.name == \"化学\" WITH td.trade_data.minimum_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.minimum_price > temp \nRETURN t.trade.name\nLIMIT 50",
+                1,
+                8.301571369171143
+            ],
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND indus.industry.name == \"化学\" WITH td.trade_data.minimum_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.`date` == date('2023-11-11') AND td.trade_data.minimum_price > temp \nRETURN t.trade.name\nLIMIT 50",
+                0,
+                0.06291723251342773
+            ],
+            [
+                "MATCH (indus:industry)<-[a:associate]-(s:stock)-[bt:belong_to]->(t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE indus.industry.name == \"化学\" WITH td.trade_data.minimum_price as temp\nMATCH (t:trade)-[htd:has_trade_data]->(td:trade_data)\nWHERE td.trade_data.minimum_price > temp AND td.trade_data.`date` == date('2023-11-11') \nRETURN t.trade.name\nLIMIT 50",
+                0,
+                0.12540388107299805
+            ]
+        ]
+    },
+    {
+        "query": "涨跌幅大于复旦复华股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '复旦复华' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.range AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.range > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"复旦复华\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.range > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                45.46195697784424
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"复旦复华\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.range > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.6767840385437012
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"复旦复华\" WITH sd.stock_data.range as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.range > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.050638437271118164
+            ]
+        ]
+    },
+    {
+        "query": "开盘价大于乐凯胶片股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '乐凯胶片' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.opening_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.opening_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"乐凯胶片\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.opening_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.2937605381011963
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"乐凯胶片\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.opening_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                45.32180380821228
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"乐凯胶片\" WITH sd.stock_data.opening_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.opening_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.683295488357544
+            ]
+        ]
+    },
+    {
+        "query": "最低价大于安阳钢铁股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '安阳钢铁' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.minimum_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.minimum_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"安阳钢铁\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.minimum_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.7725124359130859
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"安阳钢铁\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.minimum_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.08221817016601562
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"安阳钢铁\" WITH sd.stock_data.minimum_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.minimum_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                44.74124097824097
+            ]
+        ]
+    },
+    {
+        "query": "收盘价大于江苏吴中股票的股票",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '江苏吴中' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.closing_price AS temp MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE sd.stock_data.closing_price > temp RETURN s.stock.name\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"江苏吴中\" WITH sd.stock_data.closing_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.closing_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                1,
+                45.461729526519775
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"江苏吴中\" WITH sd.stock_data.closing_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND sd.stock_data.closing_price > temp \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.22380590438842773
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"江苏吴中\" WITH sd.stock_data.closing_price as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.closing_price > temp AND sd.stock_data.`date` == date('2023-11-11') \nRETURN s.stock.name\nLIMIT 50",
+                0,
+                0.7110943794250488
+            ]
+        ]
+    },
+    {
+        "query": "国泰君安和中信证券的收盘价差多少",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '国泰君安' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.closing_price as temp1 MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '中信证券' AND sd.stock_data.`date` == date('2023-11-11') WITH ABS(sd.stock_data.closing_price - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.04518246650695801
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                2.6002979278564453
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.08469200134277344
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.06488919258117676
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.05414295196533203
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.690255880355835
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.05518150329589844
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.045285940170288086
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.056143999099731445
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3861701488494873
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3244526386260986
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.5627493858337402
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                0.060463666915893555
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"国泰君安\" WITH sd.stock_data.closing_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"中信证券\" WITH sd.stock_data.closing_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"国泰君安\" OR s.stock.name == \"中信证券\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.06361675262451172
+            ]
+        ]
+    },
+    {
+        "query": "四川金顶和弘业股份的成立日期差多少",
+        "golden": "MATCH (s:stock) WHERE s.stock.name == '四川金顶' WITH s.stock.establishment_date AS temp1 MATCH (s:stock) WHERE s.stock.name == '弘业股份' WITH ABS(s.stock.establishment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) AND s.stock.name == \"四川金顶\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) AND s.stock.name == \"弘业股份\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002277851104736328
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) AND s.stock.name == \"四川金顶\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) AND s.stock.name == \"弘业股份\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0026319026947021484
+            ],
+            [
+                "MATCH (s:stock)\nWHERE s.stock.name == \"四川金顶\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"弘业股份\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0023610591888427734
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"四川金顶\" OR s.stock.name == \"弘业股份\" ) AND s.stock.name == \"四川金顶\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"弘业股份\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002165555953979492
+            ]
+        ]
+    },
+    {
+        "query": "江西铜业和长江通信的成立日期差多少",
+        "golden": "MATCH (s:stock) WHERE s.stock.name == '江西铜业' WITH s.stock.establishment_date AS temp1 MATCH (s:stock) WHERE s.stock.name == '长江通信' WITH ABS(s.stock.establishment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) AND s.stock.name == \"江西铜业\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) AND s.stock.name == \"长江通信\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002098560333251953
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) AND s.stock.name == \"江西铜业\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"长江通信\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0020990371704101562
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) AND s.stock.name == \"江西铜业\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) AND s.stock.name == \"长江通信\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0027303695678710938
+            ],
+            [
+                "MATCH (s:stock)\nWHERE s.stock.name == \"江西铜业\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"长江通信\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"江西铜业\" OR s.stock.name == \"长江通信\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002432584762573242
+            ]
+        ]
+    },
+    {
+        "query": "张谷梁和华独孤的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '张谷梁' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '华独孤' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) AND cm.chairman.name == \"张谷梁\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) AND cm.chairman.name == \"华独孤\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002213001251220703
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) AND cm.chairman.name == \"张谷梁\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) AND cm.chairman.name == \"华独孤\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002754688262939453
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"张谷梁\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"华独孤\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0027015209197998047
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"张谷梁\" OR cm.chairman.name == \"华独孤\" ) AND cm.chairman.name == \"张谷梁\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"华独孤\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0022017955780029297
+            ]
+        ]
+    },
+    {
+        "query": "房地产和零售的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '房地产' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '零售' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"房地产\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025670528411865234
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"房地产\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002118349075317383
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"房地产\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002181529998779297
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"房地产\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"房地产\" OR indus.industry.name == \"零售\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002698183059692383
+            ]
+        ]
+    },
+    {
+        "query": "冯皇甫和严云的离职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '冯皇甫' WITH c.chairman.departure_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '严云' WITH ABS(c.chairman.departure_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) AND cm.chairman.name == \"冯皇甫\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) AND cm.chairman.name == \"严云\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002574443817138672
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"冯皇甫\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"严云\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0027017593383789062
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) AND cm.chairman.name == \"冯皇甫\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"严云\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0020699501037597656
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) AND cm.chairman.name == \"冯皇甫\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"冯皇甫\" OR cm.chairman.name == \"严云\" ) AND cm.chairman.name == \"严云\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002234220504760742
+            ]
+        ]
+    },
+    {
+        "query": "吴端木和施东门的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '吴端木' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '施东门' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) AND cm.chairman.name == \"吴端木\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) AND cm.chairman.name == \"施东门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0024509429931640625
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"吴端木\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"施东门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.005541086196899414
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) AND cm.chairman.name == \"吴端木\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) AND cm.chairman.name == \"施东门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002840280532836914
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"施东门\" ) AND cm.chairman.name == \"吴端木\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"施东门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002201557159423828
+            ]
+        ]
+    },
+    {
+        "query": "化妆品和零售的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '化妆品' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '零售' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"化妆品\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002276182174682617
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"化妆品\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0022635459899902344
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"化妆品\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025098323822021484
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"化妆品\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) AND indus.industry.name == \"零售\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化妆品\" OR indus.industry.name == \"零售\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002941608428955078
+            ]
+        ]
+    },
+    {
+        "query": "航空航天和制造的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '航空航天' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '制造' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) AND indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"制造\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002109527587890625
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) AND indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) AND indus.industry.name == \"制造\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0020051002502441406
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"制造\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002347707748413086
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) AND indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) AND indus.industry.name == \"制造\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"航空航天\" OR indus.industry.name == \"制造\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002568483352661133
+            ]
+        ]
+    },
+    {
+        "query": "柏梁丘和谢北门的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '柏梁丘' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '谢北门' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) AND cm.chairman.name == \"柏梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"谢北门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002215147018432617
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"柏梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"谢北门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002467632293701172
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) AND cm.chairman.name == \"柏梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) AND cm.chairman.name == \"谢北门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002181529998779297
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) AND cm.chairman.name == \"柏梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) AND cm.chairman.name == \"谢北门\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"柏梁丘\" OR cm.chairman.name == \"谢北门\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002735137939453125
+            ]
+        ]
+    },
+    {
+        "query": "章太叔和褚宇文的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '章太叔' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '褚宇文' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) AND cm.chairman.name == \"章太叔\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"褚宇文\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0019383430480957031
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) AND cm.chairman.name == \"章太叔\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) AND cm.chairman.name == \"褚宇文\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0021703243255615234
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"章太叔\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"褚宇文\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0023741722106933594
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) AND cm.chairman.name == \"章太叔\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) AND cm.chairman.name == \"褚宇文\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"章太叔\" OR cm.chairman.name == \"褚宇文\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002563953399658203
+            ]
+        ]
+    },
+    {
+        "query": "制造和能源的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '制造' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '能源' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"制造\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0021877288818359375
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"制造\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0024547576904296875
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"制造\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002796649932861328
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"制造\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"制造\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002185344696044922
+            ]
+        ]
+    },
+    {
+        "query": "汽车和航空航天的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '汽车' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '航空航天' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) AND indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002422809600830078
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) AND indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002173185348510742
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0020394325256347656
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"航空航天\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"航空航天\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0024521350860595703
+            ]
+        ]
+    },
+    {
+        "query": "能源和汽车的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '能源' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '汽车' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0021920204162597656
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0026483535766601562
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"汽车\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0024559497833251953
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"能源\" OR indus.industry.name == \"汽车\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"汽车\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.00202178955078125
+            ]
+        ]
+    },
+    {
+        "query": "哈空调和保税科技的成立日期差多少",
+        "golden": "MATCH (s:stock) WHERE s.stock.name == '哈空调' WITH s.stock.establishment_date AS temp1 MATCH (s:stock) WHERE s.stock.name == '保税科技' WITH ABS(s.stock.establishment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) AND s.stock.name == \"哈空调\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) AND s.stock.name == \"保税科技\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0021021366119384766
+            ],
+            [
+                "MATCH (s:stock)\nWHERE s.stock.name == \"哈空调\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"保税科技\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002599000930786133
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) AND s.stock.name == \"哈空调\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"保税科技\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0022339820861816406
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) AND s.stock.name == \"哈空调\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) AND s.stock.name == \"保税科技\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"哈空调\" OR s.stock.name == \"保税科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0023889541625976562
+            ]
+        ]
+    },
+    {
+        "query": "化学和能源的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '化学' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '能源' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"化学\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025539398193359375
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"化学\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0020160675048828125
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"化学\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0024585723876953125
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"化学\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"化学\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0021681785583496094
+            ]
+        ]
+    },
+    {
+        "query": "韩司马和赵诸葛的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '韩司马' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '赵诸葛' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) AND cm.chairman.name == \"韩司马\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) AND cm.chairman.name == \"赵诸葛\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0022552013397216797
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) AND cm.chairman.name == \"韩司马\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"赵诸葛\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002151966094970703
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) AND cm.chairman.name == \"韩司马\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) AND cm.chairman.name == \"赵诸葛\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025207996368408203
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"韩司马\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"赵诸葛\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"韩司马\" OR cm.chairman.name == \"赵诸葛\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0024056434631347656
+            ]
+        ]
+    },
+    {
+        "query": "吴端木和秦梁丘的离职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '吴端木' WITH c.chairman.departure_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '秦梁丘' WITH ABS(c.chairman.departure_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) AND cm.chairman.name == \"吴端木\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"秦梁丘\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.001985788345336914
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"吴端木\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"秦梁丘\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0024170875549316406
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) AND cm.chairman.name == \"吴端木\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) AND cm.chairman.name == \"秦梁丘\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002111196517944336
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) AND cm.chairman.name == \"吴端木\" WITH cm.chairman.departure_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) AND cm.chairman.name == \"秦梁丘\" WITH cm.chairman.departure_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"吴端木\" OR cm.chairman.name == \"秦梁丘\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002573728561401367
+            ]
+        ]
+    },
+    {
+        "query": "汽车和电信的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '汽车' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '电信' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"电信\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025458335876464844
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) AND indus.industry.name == \"电信\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025010108947753906
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) AND indus.industry.name == \"电信\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002151966094970703
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"汽车\" OR indus.industry.name == \"电信\" ) AND indus.industry.name == \"汽车\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"电信\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0021104812622070312
+            ]
+        ]
+    },
+    {
+        "query": "窦亓和严公治的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '窦亓' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '严公治' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) AND cm.chairman.name == \"窦亓\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"严公治\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002303600311279297
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"窦亓\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"严公治\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002555370330810547
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) AND cm.chairman.name == \"窦亓\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) AND cm.chairman.name == \"严公治\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002730846405029297
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) AND cm.chairman.name == \"窦亓\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"窦亓\" OR cm.chairman.name == \"严公治\" ) AND cm.chairman.name == \"严公治\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002264738082885742
+            ]
+        ]
+    },
+    {
+        "query": "标准股份和新世界的成立日期差多少",
+        "golden": "MATCH (s:stock) WHERE s.stock.name == '标准股份' WITH s.stock.establishment_date AS temp1 MATCH (s:stock) WHERE s.stock.name == '新世界' WITH ABS(s.stock.establishment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) AND s.stock.name == \"标准股份\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) AND s.stock.name == \"新世界\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002492189407348633
+            ],
+            [
+                "MATCH (s:stock)\nWHERE s.stock.name == \"标准股份\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"新世界\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0025823116302490234
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) AND s.stock.name == \"标准股份\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE s.stock.name == \"新世界\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002136707305908203
+            ],
+            [
+                "MATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) AND s.stock.name == \"标准股份\" WITH s.stock.establishment_date as temp1\nMATCH (s:stock)\nWHERE ( s.stock.name == \"标准股份\" OR s.stock.name == \"新世界\" ) AND s.stock.name == \"新世界\" WITH s.stock.establishment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002126455307006836
+            ]
+        ]
+    },
+    {
+        "query": "秦梁丘和谢夏侯的任职日期差多少",
+        "golden": "MATCH (c:chairman) WHERE c.chairman.name == '秦梁丘' WITH c.chairman.appointment_date AS temp1 MATCH (c:chairman) WHERE c.chairman.name == '谢夏侯' WITH ABS(c.chairman.appointment_date - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (cm:chairman)\nWHERE cm.chairman.name == \"秦梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"谢夏侯\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0023550987243652344
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) AND cm.chairman.name == \"秦梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) AND cm.chairman.name == \"谢夏侯\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002673625946044922
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) AND cm.chairman.name == \"秦梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) AND cm.chairman.name == \"谢夏侯\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002123117446899414
+            ],
+            [
+                "MATCH (cm:chairman)\nWHERE ( cm.chairman.name == \"秦梁丘\" OR cm.chairman.name == \"谢夏侯\" ) AND cm.chairman.name == \"秦梁丘\" WITH cm.chairman.appointment_date as temp1\nMATCH (cm:chairman)\nWHERE cm.chairman.name == \"谢夏侯\" WITH cm.chairman.appointment_date as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.008897542953491211
+            ]
+        ]
+    },
+    {
+        "query": "农业和能源的规模差多少",
+        "golden": "MATCH (n:industry) WHERE n.industry.name == '农业' WITH n.industry.scale AS temp1 MATCH (n:industry) WHERE n.industry.name == '能源' WITH ABS(n.industry.scale - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"农业\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.002629995346069336
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"农业\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.0031194686889648438
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"农业\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) AND indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.002176046371459961
+            ],
+            [
+                "MATCH (indus:industry)\nWHERE indus.industry.name == \"农业\" WITH indus.industry.scale as temp1\nMATCH (indus:industry)\nWHERE indus.industry.name == \"能源\" WITH indus.industry.scale as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (indus:industry)\nWHERE ( indus.industry.name == \"农业\" OR indus.industry.name == \"能源\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.0027794837951660156
+            ]
+        ]
+    },
+    {
+        "query": "生益科和长电科技的最低价差多少",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '生益科' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.minimum_price AS temp1 MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)WHERE s.stock.name == '长电科技' AND sd.stock_data.`date` == date('2023-11-11') WITH ABS(sd.stock_data.minimum_price - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.052629947662353516
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.394371509552002
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.044248342514038086
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.04711341857910156
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.049108266830444336
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                2.442003011703491
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.3299028873443604
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                0.07535696029663086
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.06585168838500977
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3996939659118652
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.05874919891357422
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.7765707969665527
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.07641363143920898
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"生益科\" OR s.stock.name == \"长电科技\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"生益科\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"长电科技\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.057027578353881836
+            ]
+        ]
+    },
+    {
+        "query": "大众公用和亚星化学的成交量差多少",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '大众公用' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.volume AS temp1 MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)WHERE s.stock.name == '亚星化学' AND sd.stock_data.`date` == date('2023-11-11') WITH ABS(sd.stock_data.volume - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.428978681564331
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.06267690658569336
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.06336736679077148
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.062024831771850586
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.474428415298462
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.06009316444396973
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                2.625985622406006
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.08111286163330078
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.04375100135803223
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.07896780967712402
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3651044368743896
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.4081408977508545
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.0699162483215332
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"大众公用\" WITH sd.stock_data.volume as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"亚星化学\" WITH sd.stock_data.volume as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"大众公用\" OR s.stock.name == \"亚星化学\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                0.051346778869628906
+            ]
+        ]
+    },
+    {
+        "query": "龙头股份和通化东宝的涨跌幅差多少",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '龙头股份' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.range AS temp1 MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)WHERE s.stock.name == '通化东宝' AND sd.stock_data.`date` == date('2023-11-11') WITH ABS(sd.stock_data.range - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.05510210990905762
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3960769176483154
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.5171265602111816
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.346463680267334
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.06267857551574707
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.046488285064697266
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.04477334022521973
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.03905129432678223
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                0.05246448516845703
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.03949427604675293
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.03841042518615723
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3846399784088135
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.052343130111694336
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"龙头股份\" WITH sd.stock_data.range as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"通化东宝\" WITH sd.stock_data.range as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"龙头股份\" OR s.stock.name == \"通化东宝\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                2.551013708114624
+            ]
+        ]
+    },
+    {
+        "query": "康缘药业和南京熊猫的最低价差多少",
+        "golden": "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data) WHERE s.stock.name == '康缘药业' AND sd.stock_data.`date` == date('2023-11-11') WITH sd.stock_data.minimum_price AS temp1 MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)WHERE s.stock.name == '南京熊猫' AND sd.stock_data.`date` == date('2023-11-11') WITH ABS(sd.stock_data.minimum_price - temp1) as abs_diff RETURN abs_diff\nLIMIT 50;",
+        "candidates": [
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.430546522140503
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.059478759765625
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                2.407430410385132
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.08068466186523438
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3583085536956787
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                2.5014538764953613
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                0.06731343269348145
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') \nRETURN temp\nLIMIT 50",
+                0,
+                1.3157241344451904
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                0,
+                0.059357404708862305
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.04615521430969238
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.04845142364501953
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) \nRETURN temp\nLIMIT 50",
+                0,
+                0.05429244041442871
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND sd.stock_data.`date` == date('2023-11-11') AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.039693593978881836
+            ],
+            [
+                "MATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"康缘药业\" WITH sd.stock_data.minimum_price as temp1\nMATCH (s:stock)-[hsd:has_stock_data]->(sd:stock_data)\nWHERE sd.stock_data.`date` == date('2023-11-11') AND ( s.stock.name == \"康缘药业\" OR s.stock.name == \"南京熊猫\" ) AND s.stock.name == \"南京熊猫\" WITH sd.stock_data.minimum_price as temp2 , temp1 WITH ABS( temp1 - temp2 ) as temp \nRETURN temp\nLIMIT 50",
+                1,
+                0.038848876953125
+            ]
+        ]
+    }
+]

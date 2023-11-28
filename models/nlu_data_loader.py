@@ -1,39 +1,49 @@
 import os
+import re
 import json
 import glob
 import math
+import random
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.utils.data.dataloader
 
-def load_data(path, task):
-    examlpe_data = []
+def load_data_for_multichoice(path):
+    example_data = []
     for file in glob.glob(path + "/bert_data.[0-9].json"):
         with open(file, "r", encoding = "utf8") as f:
-            if task == "multichoice":
-                examlpe_data += json.load(f)
-            elif task == "classify":
-                groups = json.load(f)
-                for group in groups:
-                    examlpe_data += [{"query": group["query"], "cypher": line[0], "label": line[1]} for line in group["candidates"]]
+            example_data += json.load(f)
+    return (example_data, None)
 
-    return examlpe_data
+def load_data_for_classification(file_path, query_file = "./bert_data/query.json"):
+    with open(file_path, "r", encoding = "utf8") as f:
+        example_data = json.load(f)
+    with open(query_file, "r", encoding = "utf8") as f:
+        query_data = json.load(f)
+    return (example_data, query_data)
+
+def query_simplify(cql):
+    reg = r"(MATCH|WHERE|RETURN|WITH|ORDER BY|LIMIT)"
+    splits = re.split(reg, cql)
+    output_str = ""
+    for i in range(len(splits)):
+        if i >= 1 and splits[i-1] in ("MATCH", "RETURN"):
+            output_str += " "
+        else:
+            output_str += splits[i]
+    return output_str
 
     
 class DataLoader(object):
     def __init__(self, data_iterator, batch_size):
         self.data_iterator = data_iterator
         self.batch_size = batch_size
-
     
     def __len__(self):
         raise NotImplementedError
     
     def _reset(self):
-        raise NotImplementedError
-    
-    def _load_data(self):
         raise NotImplementedError
     
     def __next__(self):
@@ -46,22 +56,21 @@ class DataLoader(object):
 class SingleBatchNLULoader(DataLoader):
     def __init__(
             self,
-            path, 
+            data, 
             tokenizer,
             shuffle = False, 
             sample_rate = 1., 
             device = "cpu"
         ):
         self.nlu_iter = NLUIterator(
-            path, 
-            self._load_data(path), 
+            data, 
             tokenizer, 
             shuffle, 
             sample_rate, 
             device
         )
 
-        super(SingleBatchNLULoader, self).__init__(self.nlu_iter.generate_example_groups())
+        super(SingleBatchNLULoader, self).__init__(self.nlu_iter.generate_example_groups(), 1)
 
     def to(self, device):
         self.nlu_iter.device = device
@@ -80,13 +89,6 @@ class SingleBatchNLULoader(DataLoader):
 
     def _reset(self):
         self.data_iterator = self.nlu_iter.generate_example_groups()
-
-    def _load_data(self, path):
-        examlpe_data = []
-        for file in glob.glob(path + "/bert_data.[0-9].json"):
-            with open(file, "r", encoding = "utf8") as f:
-                examlpe_data += json.load(f)
-        return examlpe_data
     
     def __len__(self):
         return len(self.nlu_iter.examples)
@@ -95,7 +97,7 @@ class SingleBatchNLULoader(DataLoader):
 class NLULoader(DataLoader):
     def __init__(
             self,
-            path, 
+            data, 
             tokenizer,
             batch_size,
             shuffle = False, 
@@ -103,8 +105,7 @@ class NLULoader(DataLoader):
             device = "cpu"
         ):
         self.nlu_iter = NLUIterator(
-            path, 
-            self._load_data(path), 
+            data,
             tokenizer, 
             shuffle, 
             sample_rate, 
@@ -133,42 +134,30 @@ class NLULoader(DataLoader):
     def _reset(self):
         self.data_iterator = self.nlu_iter.generate_examples()
 
-    def _load_data(self, path):
-        examlpe_data = []
-        for file in glob.glob(path + "/bert_data.[0-9].json"):
-            with open(file, "r", encoding = "utf8") as f:
-                groups = json.load(f)
-                for group in groups:
-                    examlpe_data += [{
-                        "query": group["query"], 
-                        "cypher": line[0], 
-                        "label": line[1]
-                        } for line in group["candidates"]]
-
-        return examlpe_data
-
     def _collate_fn(self, batch):
-        input_ids, attention_mask, labels = [], [], []
+        input_ids, attention_mask, labels, query_ids = [], [], [], []
         for item in batch:
             input_ids += [item[0].unsqueeze(0)]
             attention_mask += [item[1].unsqueeze(0)]
             labels += [item[2].unsqueeze(0)]
+            query_ids += [item[3]]
         input_ids = torch.cat(input_ids, dim = 0)
         attention_mask = torch.cat(attention_mask, dim = 0)
         labels = torch.cat(labels, dim = 0)
-        return {"input": (input_ids, attention_mask), "label": (labels,)}
+        return {"input": (input_ids, attention_mask), "label": (labels,), "query_ids": query_ids}
     
     def __len__(self):
         length = len(self.nlu_iter.examples)
         return math.ceil(length / self.batch_size)
     
 class NLUIterator(object):
-    def __init__(self, path, examples, tokenizer, shuffle, sample_rate, device):
-        self.path = path
+    def __init__(self, examples, tokenizer, shuffle, sample_rate, device):
         self.tokenizer = tokenizer
         self.device = device
-
-        self.examples = np.asarray(examples)
+        
+        self.examples = examples[0]
+        self.queries = examples[1]
+        self.examples = np.asarray(self.examples, dtype=object)
 
         if shuffle:
             self.shuffle()
@@ -208,43 +197,54 @@ class NLUIterator(object):
             )
 
     def generate_examples(self):
-        for example in self.examples:
-            query = example["query"]
+        for i, example in enumerate(self.examples):
+            query_idx = example["query_idx"]
+            query = self.queries[query_idx]
             cypher = example["cypher"]
             label = example["label"]
-
+            
+            cypher = query_simplify(cypher)
             encoded_dict = self.tokenizer(
-                f"Query: {query} Cypher: {cypher}", padding = "max_length", max_length = 514, truncation = True)
+                text = f"Query: {query} Cypher: {cypher}", 
+                padding = "max_length", 
+                max_length = 514, 
+                truncation = True
+            )
             input_ids = encoded_dict["input_ids"]
             attention_mask = encoded_dict["attention_mask"]
+            # truncated exmaples will trigger error
+            if sum(attention_mask) == 514:
+                continue
 
             yield (
                 torch.tensor(input_ids, device = self.device, dtype = torch.int64),
                 torch.tensor(attention_mask, device = self.device, dtype = torch.int64),
                 torch.tensor(label, device = self.device, dtype = torch.int64),
+                query_idx
             )
 
 def get_dataloader(path, task, split, tokenizer, batch_size = 1, shuffle = True, sample_rate = 1., device = "cpu"):
-    match task:
-        case "classification":
-            dataloader = NLULoader(
-                path = path,
-                tokenizer = tokenizer,
-                batch_size = batch_size,
-                shuffle = shuffle,
-                sample_rate = sample_rate,
-                device = device
-            )
-        case "multichoice":
-            dataloader = SingleBatchNLULoader(
-                path = path,
-                tokenizer = tokenizer,
-                shuffle = shuffle,
-                sample_rate = sample_rate,
-                device = device
-            )
-        case _:
-            raise ValueError(f"Undefined task '{task}'")
+    if task == "classification":
+        json_data = load_data_for_classification(path + f"{split}/{split}.json")
+        dataloader = NLULoader(
+            data = json_data,
+            tokenizer = tokenizer,
+            batch_size = batch_size,
+            shuffle = shuffle,
+            sample_rate = sample_rate,
+            device = device
+        )
+    elif task == "multichoice":
+        json_data = load_data_for_multichoice(path)
+        dataloader = SingleBatchNLULoader(
+            data = json_data,
+            tokenizer = tokenizer,
+            shuffle = shuffle,
+            sample_rate = sample_rate,
+            device = device
+        )
+    else:
+        raise ValueError(f"Undefined task '{task}'")
         
     return dataloader
     

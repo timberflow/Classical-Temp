@@ -16,3 +16,10 @@ class CrossEntropyLoss(nn.Module):
     
     def forward(self, logits, target):
         return self.compute_loss(logits, target)
+    
+class BinaryCrossEntropyLoss(nn.Module):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        self.compute_loss = nn.BCELoss(reduction="mean")
+    def forward(self, logits, target):
+        return self.compute_loss(logits, target)    
